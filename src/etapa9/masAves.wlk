@@ -34,3 +34,21 @@ object pipa {
 	method acumuladoKmsRecorridos() { return acumuladoKmsRecorridos }
 	method acumuladoGramosIngeridos() { return acumuladoGramosIngeridos }
 }
+
+class Paloma{
+	
+	var cantidadGramosIngresados = 0
+	var cantidadKmsVolados = 0
+	
+	method comer(cosa,gramos){
+		cantidadGramosIngresados+=gramos
+	}
+	
+	method volar(kms){
+		cantidadKmsVolados+=kms
+	}
+	
+	method haceLoQueQuieras(){
+		
+	}
+}

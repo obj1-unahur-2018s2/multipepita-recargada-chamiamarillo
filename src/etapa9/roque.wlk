@@ -3,17 +3,19 @@ import comidas.*
 import masAves.*
 
 object roque {
-	var pupilo
+	var pupilos = #{}
 	
-	method tuPupiloEs(ave) { 
-		pupilo = ave
+	method agregarPupilo(ave) { 
+		pupilos.add(ave)
 	} 
-	method pupiloActual() { return pupilo }
+	method pupilosl() { return pupilos }
 
-	method entrenar() { 
+	method entrenar() {
+		pupilos.forEach({pupilo => { 
 		pupilo.volar(10)
 		pupilo.comer(alpiste,30)
 		pupilo.volar(5)
 		pupilo.haceLoQueQuieras()
-	} 
+		}})
+	}
 }
