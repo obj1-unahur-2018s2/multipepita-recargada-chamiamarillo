@@ -3,7 +3,6 @@ import comidas.*
 
 test "PRIMER TEST" {
 	var juliana = new Golondrinas() 
-	//var enriqueta = new Golondrinas()
 	var melina = new Golondrinas()
 	var tatiana = new Golondrinas()
 	
@@ -13,11 +12,18 @@ test "PRIMER TEST" {
 	melina.volar(130)
 	tatiana.volar(40)
 	
+	
 	assert.equals(juliana.energia(),200)
 	assert.equals(melina.energia(),760)
 	assert.equals(tatiana.energia(),22)
-	
-	
-	//assert.that(true)
-
+	assert.equals(juliana.estaFeliz(),false)
+	/*
+	 * assert.equals(juliana.estaFeliz() && juliana.estaDebil(),false)
+	 * 
+	 * esto pregunta todo en uno. El unico problema no es una buena
+	 * practica porque no sabria cual fallo. estaDebil o estaFeliz
+	 */
+	assert.equals(juliana.estaDebil(),false)
+	assert.equals(melina.estaFeliz(),true)
+	assert.equals(tatiana.estaDebil(),true)
 }
